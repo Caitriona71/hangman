@@ -4,3 +4,5 @@
 import random
 
 from words import words_list
+
+def get_a_word():
