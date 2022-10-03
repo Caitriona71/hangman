@@ -218,7 +218,7 @@ word_list = [
     'disposal',
     'understood',
     'inquisitive',
-    'carnival',
+    'festival',
     'dollar',
     'casino',
     'wretched',
@@ -298,5 +298,5 @@ word_list = [
     'stone',
     'halfhearted',
     'grasp'
-    
+
 ]
