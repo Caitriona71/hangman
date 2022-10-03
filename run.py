@@ -12,3 +12,4 @@ def get_a_word():
     word = random.choice(word_list)
     return word.upper()
 
+def play():
