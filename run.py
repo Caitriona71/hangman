@@ -21,3 +21,19 @@ def play():
     guesses_letters = []
     guesses_words = []
     attempts = 6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
