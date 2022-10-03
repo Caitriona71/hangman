@@ -3,6 +3,7 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 import random
 
-from words import words_list
+from words import word_list
 
 def get_a_word():
+    word = random.choice(word_list)
