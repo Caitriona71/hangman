@@ -5,6 +5,7 @@ import random
 from words import word_list
 
 print("Let's play Hangman.")
+print(show_hangman(attempts))
 
 # Select a random word
 
@@ -15,7 +16,8 @@ def get_a_word():
     return word.upper()
 
 
-def play():
+def play(word):
+    word_blanks = "_" * len(word)
     guesses = False
     guesses_letters = []
     guesses_words = []
@@ -26,7 +28,7 @@ def show_hangman(attempts):
     phases = [ """
                     +---+
                     |   |
-                    |      
+                    |
                     |     
                     |      
                     |     
@@ -46,7 +48,7 @@ def show_hangman(attempts):
                     |   |
                     |   O
                     |   |
-                    |      
+                    |        
                     |    
                   ========
                 """,
@@ -82,7 +84,7 @@ def show_hangman(attempts):
                     |   |
                     |   O
                     |  /|\
-                    |  / \  
+                    |  / \ 
                     |
                   ========
                 """]
