@@ -5,11 +5,11 @@ import random
 
 from words import word_list
 
-# print("Let's play Hangman.")
-print("------------------------------------")
+print("Let's play Hangman.")
 
 # Choose a random word
 randomWord = random.choice(word_list)
+print(randomWord)
 
 for x in randomWord:
     print("_", end=" ")
@@ -79,11 +79,11 @@ def printLines():
         print("\u203E", end=" ")
 
         length_of_word_to_guess = len(randomWord)
-        amount_of_times_wrong = 0
+        wrong = 0
         current_guess_index = 0
         current_letters_guessed = []
         current_letters_right = 0
-    while (amount_of_times_wrong != 6 and 
+    while (wrong != 6 and 
            current_letters_right != length_of_word_to_guess):
         print("\nLetters guessed so far: ")
         for letter in current_letters_guessed:
@@ -92,24 +92,22 @@ def printLines():
         letterGuessed = input("\nGuess a letter: ")
         # User is right
         if (randomWord[current_guess_index] == letterGuessed):
-            print_hangman(amount_of_times_wrong)
+            print_hangman(wrong)
             # Print word
             current_guess_index += 1
             current_letters_guessed.append(letterGuessed)
             current_letters_right = printWord(current_letters_guessed)
-            printLines()
             # User was wrong
         else:
-            amount_of_times_wrong += 1
+            wrong += 1
             current_letters_guessed.append(letterGuessed)
             # Update the drawing
-            print_hangman(amount_of_times_wrong)
+            print_hangman(wrong)
             # Print word
             current_letters_right = printWord(current_letters_guessed)
-            printLines()
+            print("Game over! Thanks for playing :)")
 
-
-print("Game over! Thanks for playing :)")
+printLines()
 
 
 
