@@ -1,15 +1,10 @@
-# You can delete these comments, but do not change the name of this file
-
 import random
-
-
 from words import word_list
 
 print("Let's play Hangman.")
 
 # Choose a random word
 randomWord = random.choice(word_list)
-print(randomWord)
 
 for x in randomWord:
     print("_", end=" ")
@@ -82,8 +77,7 @@ def printLines():
         current_guess_index = 0
         current_letters_guessed = []
         current_letters_right = 0
-    while (wrong != 6 and 
-           current_letters_right != length_of_word_to_guess):
+    while (wrong != 6 and current_letters_right != length_of_word_to_guess):
         print("\nLetters guessed so far: ")
         for letter in current_letters_guessed:
             print(letter, end=" ")
@@ -105,6 +99,7 @@ def printLines():
             # Print word
             current_letters_right = printWord(current_letters_guessed)
             print("Game over! Thanks for playing :)")
+
 
 printLines()
 
