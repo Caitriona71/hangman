@@ -76,7 +76,6 @@ def printWord(guessedLetters):
 def printLines():
     print("\r")
     for char in randomWord:
-        print("\u203E", end=" ")
 
         length_of_word_to_guess = len(randomWord)
         wrong = 0
