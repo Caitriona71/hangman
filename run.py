@@ -73,11 +73,11 @@ def printLines():
     for char in randomWord:
         print("\u203E", end=" ")
         length_of_word_to_guess = len(randomWord)
-        wrong = 0
+        amount_of_times_wrong = 0
         current_guess_index = 0
         current_letters_guessed = []
         current_letters_right = 0
-    while (wrong != 6 and current_letters_right != length_of_word_to_guess):
+    while (amount_of_times_wrong != 6 and current_letters_right != length_of_word_to_guess):
         print("\nLetters guessed so far: ")
         for letter in current_letters_guessed:
             print(letter, end=" ")
@@ -85,7 +85,7 @@ def printLines():
         letterGuessed = input("\nGuess a letter: ")
         # User is right
         if (randomWord[current_guess_index] == letterGuessed):
-            print_hangman(wrong)
+            print_hangman(amount_of_times_wrong)
             # Print word
             current_guess_index += 1
             current_letters_guessed.append(letterGuessed)
