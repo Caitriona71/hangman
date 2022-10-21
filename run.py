@@ -16,43 +16,43 @@ def print_hangman(wrong):
         print("      |")
         print("      |")
         print("      |")
-        print("  =======")
+        print("=========")
     elif (wrong == 1):
         print("\n+---+")
         print("O     |")
         print("      |")
         print("      |")
-        print("  =======")
+        print("=========")
     elif (wrong == 2):
         print("\n+---+")
         print("O     |")
         print("|     |")
         print("      |")
-        print("  =======")
+        print("=========")
     elif (wrong == 3):
         print("\n+---+")
-        print(" O     |")
-        print("/|     |")
-        print("       |")
-        print("   =======")
+        print(" O    |")
+        print("/|    |")
+        print("      |")
+        print("=========")
     elif (wrong == 4):
         print("\n+---+")
-        print(" O     |")
-        print("/|\    |")
-        print("       |")
-        print("   =======")
+        print(" O    |")
+        print("/|\   |")
+        print("      |")
+        print("=========")
     elif (wrong == 5):
         print("\n+---+")
-        print(" O     |")
-        print("/|\    |")
-        print("/      |")
-        print("   =======")
+        print(" O    |")
+        print("/|\   |")
+        print("/     |")
+        print("=========")
     elif (wrong == 6):
         print("\n+---+")
-        print(" O     |")
-        print("/|\    |")
-        print("/ \    |")
-        print("   =======")
+        print(" O    |")
+        print("/|\   |")
+        print("/ \   |")
+        print("=========")
 
 
 def printWord(guessedLetters):
@@ -71,7 +71,7 @@ def printWord(guessedLetters):
 def printLines():
     print("\r")
     for char in randomWord:
-
+        print("\u203E", end=" ")
         length_of_word_to_guess = len(randomWord)
         wrong = 0
         current_guess_index = 0
