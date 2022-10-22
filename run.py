@@ -64,15 +64,15 @@ def print_hangman(wrong):
 
 def printWord(guessedLetters):
   counter = 0
-  rightLetters = 0
+  correctLetters = 0
   for char in randomWord:
     if (char in guessedLetters):
       print(randomWord[counter], end=" ")
-      rightLetters += 1
+      correctLetters += 1
     else:
       print(" ", end=" ")
     counter += 1
-  return rightLetters
+  return correctLetters
 
 
 def printLines():
