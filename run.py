@@ -3,10 +3,10 @@ from words import word_list
 
 print("Let's play Hangman.")
 
-# Choose a random word
-randomWord = random.choice(word_list)
+# Choose a secret word
+secretWord = random.choice(word_list)
 
-for x in randomWord:
+for x in secretWord:
   print("_", end=" ")
 
 
@@ -65,9 +65,9 @@ def print_hangman(wrong):
 def printWord(guessedLetters):
   counter = 0
   correctLetters = 0
-  for char in randomWord:
+  for char in secretWord:
     if (char in guessedLetters):
-      print(randomWord[counter], end=" ")
+      print(secretWord[counter], end=" ")
       correctLetters += 1
     else:
       print(" ", end=" ")
@@ -77,10 +77,10 @@ def printWord(guessedLetters):
 
 def printLines():
   print("\r")
-  for char in randomWord:
+  for char in secretWord:
     print("\u203E", end=" ")
 
-length_of_word_to_guess = len(randomWord)
+length_of_word_to_guess = len(secretWord)
 amount_of_times_wrong = 0
 current_guess_index = 0
 current_letters_guessed = []
@@ -93,7 +93,7 @@ while (amount_of_times_wrong != 6 and current_letters_right != length_of_word_to
   # Prompt user for input
   letterGuessed = input("\nGuess a letter: ")
   # User is right
-  if (randomWord[current_guess_index] == letterGuessed):
+  if (secretWord[current_guess_index] == letterGuessed):
     print_hangman(amount_of_times_wrong)
     # Print word
     current_guess_index += 1
