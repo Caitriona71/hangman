@@ -2,13 +2,17 @@ import random
 import time
 # pip install pyfiglet
 from pyfiglet import Figlet
-from words import word_list                                
+from words import word_list                               
 
-print("\033[1;34;40mI know you're \033[1;31;40mdying \033[1;34;40mto play this game.")
-print("\033[1;34;40mSo get in the \033[1;32;40mswing \033[1;34;40mand give it a try!")
-print("\033[1;34;40mDon't \033[1;31;40mhang \033[1;34;40maround. Can you guess the secret word?")
-print("\033[1;34;40mOr are you in for the bad \033[1;31;40mnoose! \033[1;34;40mThe \033[1;32;40mneck's \033[1;34;40mgame awaits you.")
-print("\033[1;34;40mDidn't you know, I got \033[1;32;40mroped \033[1;34;40minto this?!") 
+print("\033[1;34;40mI know you're \033[1;31;40mdying")
+print("\033[1;34;40mto play this game.")
+print("\033[1;34;40mSo get in the \033[1;32;40mswing")
+print("\033[1;34;40mand give it a try!")
+print("Can you guess the secret word?")
+print("\033[1;34;40mOr are you in for bad \033[1;31;40mnoose!")
+print("\033[1;34;40mDon't \033[1;32;40mhang \033[1;34;40maround.")
+print("\033[1;34;40mThe \033[1;31;40mneck's \033[1;34;40mgame awaits you!")
+print("\033[1;34;40mSorry you got \033[1;32;40mroped \033[1;34;40minto this?!") 
 print("\r")
 f = Figlet (font='doom')
 print(f.renderText('Hangman'))

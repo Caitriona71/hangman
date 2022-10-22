@@ -39,7 +39,7 @@ word_list = [
     'visual',
     'winter',
     'piano',
-    'revolve,
+    'revolve',
     'today',
     'emerald',
     'orange',
