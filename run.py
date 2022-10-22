@@ -1,7 +1,10 @@
 import random
 from words import word_list
 
-print("Let's play Hangman.")
+print("I know your're dying to play this game. So get in the swing and give it a try!")
+print("Can you guess the secret word or are you in for the bad noose! Don't hang around.")
+print("The neck's game awaits you. Didn't you know, I got roped into this?!")
+print("Let's play hangman!")
 
 # Choose a secret word
 randomWord = random.choice(word_list)
@@ -88,7 +91,7 @@ letters_already_guessed = []
 letters_correct = 0
 
 while (attempts_wrong != 6 and letters_correct != length_guess_word):
-  print("\nLetters guessed so far: ")
+  print("\nLetters already guessed: ")
   for letter in letters_already_guessed:
     print(letter, end=" ")
   # Prompt user for input
