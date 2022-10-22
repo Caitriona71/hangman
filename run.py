@@ -1,10 +1,14 @@
 import random
 from words import word_list
 
-print("I know your're dying to play this game. So get in the swing and give it a try!")
-print("Can you guess the secret word or are you in for the bad noose! Don't hang around.")
-print("The neck's game awaits you. Didn't you know, I got roped into this?!")
-print("Let's play hangman!")
+print("\033[1;32;40mI know your're dying to play this game.")
+print("\033[1;31;40mSo get in the swing and give it a try!")
+print("\033[1;34;40mDon't hang around. Can you guess the secret word?")
+print("\033[1;32;40mOr are you in for the bad noose! The neck's game awaits you.")
+print("\033[1;31;40mDidn't you know, I got roped into this?!") 
+print("\r")
+print("\033[1;33;40mLet's play hangman!")
+print("\r")
 
 # Choose a secret word
 randomWord = random.choice(word_list)
@@ -20,49 +24,49 @@ def print_hangman(wrong):
     print("    |")
     print("    |")
     print("    |")
-    print("=======")
+    print("=======\n\n")
   elif (wrong == 1):
     print("\n+---+")
     print("O   |")
     print("    |")
     print("    |")
     print("    |")
-    print("=======")
+    print("=======\n\n")
   elif (wrong == 2):
     print("\n+---+")
     print("O   |")
     print("|   |")
     print("    |")
     print("    |")
-    print("=======")
+    print("=======\n\n")
   elif (wrong == 3):
     print("\n+---+")
     print(" O  |")
     print("/|  |")
     print("    |")
     print("    |")
-    print("=======")
+    print("=======\n\n")
   elif (wrong == 4):
     print("\n+---+")
     print(" O  |")
     print("/|\ |")
     print("    |")
     print("    |")
-    print("=======")
+    print("=======\n\n")
   elif (wrong == 5):
     print("\n+---+")
     print(" O  |")
     print("/|\ |")
     print("/   |")
     print("    |")
-    print("=======")
+    print("=======\n\n")
   elif (wrong == 6):
     print("\n+---+")
     print(" O  |")
     print("/|\ |")
     print("/ \ |")
     print("    |")
-    print("=======")
+    print("=======\n\n")
 
 
 def printWord(guessedLetters):
@@ -92,10 +96,12 @@ letters_correct = 0
 
 while (attempts_wrong != 6 and letters_correct != length_guess_word):
   print("\nLetters already guessed: ")
+  print("\r")
   for letter in letters_already_guessed:
     print(letter, end=" ")
   # Prompt user for input
   letterGuessed = input("\nPlease guess a letter: ")
+  print("\r")
   # User is right
   if (randomWord[guess_index] == letterGuessed):
     print_hangman(attempts_wrong)
@@ -121,6 +127,6 @@ continue_playing = input("\nWould you like to play again? (y/n) ")
 if (continue_playing == 'y'):
     randomWord = random.choice(word_list)
 elif (continue_playing == 'n'):
-    print("Thanks for playing :)")
+    print("\nThanks for playing :)")
 while continue_playing != 'y' and 'n':
     print()
