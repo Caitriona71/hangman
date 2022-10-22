@@ -4,9 +4,9 @@ from words import word_list
 print("Let's play Hangman.")
 
 # Choose a secret word
-secretWord = random.choice(word_list)
+randomWord = random.choice(word_list)
 
-for x in secretWord:
+for x in randomWord:
   print("_", end=" ")
 
 
@@ -65,9 +65,9 @@ def print_hangman(wrong):
 def printWord(guessedLetters):
   counter = 0
   correctLetters = 0
-  for char in secretWord:
+  for char in randomWord:
     if (char in guessedLetters):
-      print(secretWord[counter], end=" ")
+      print(randomWord[counter], end=" ")
       correctLetters += 1
     else:
       print(" ", end=" ")
@@ -77,38 +77,38 @@ def printWord(guessedLetters):
 
 def printLines():
   print("\r")
-  for char in secretWord:
+  for char in randomWord:
     print("\u203E", end=" ")
 
 
-length_guess_word = len(secretWord)
+length_guess_word = len(randomWord)
 attempts_wrong = 0
 guess_index = 0
-current_letters_guessed = []
+letters_already_guessed = []
 current_letters_right = 0
 
 while (attempts_wrong != 6 and current_letters_right != length_guess_word):
   print("\nLetters guessed so far: ")
-  for letter in current_letters_guessed:
+  for letter in letters_already_guessed:
     print(letter, end=" ")
   # Prompt user for input
   letterGuessed = input("\nGuess a letter: ")
   # User is right
-  if (secretWord[guess_index] == letterGuessed):
+  if (randomWord[guess_index] == letterGuessed):
     print_hangman(attempts_wrong)
     # Print word
     guess_index += 1
-    current_letters_guessed.append(letterGuessed)
-    current_letters_right = printWord(current_letters_guessed)
+    letters_already_guessed.append(letterGuessed)
+    current_letters_right = printWord(letters_already_guessed)
     printLines()
   # User was wrong
   else:
     attempts_wrong += 1
-    current_letters_guessed.append(letterGuessed)
+    letters_already_guessed.append(letterGuessed)
     # Update the drawing
     print_hangman(attempts_wrong)
     # Print word
-    current_letters_right = printWord(current_letters_guessed)
+    current_letters_right = printWord(letters_already_guessed)
     printLines()
            
 print("Game over! Thanks for playing :)")
