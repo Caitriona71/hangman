@@ -95,7 +95,7 @@ while (attempts_wrong != 6 and letters_correct != length_guess_word):
   for letter in letters_already_guessed:
     print(letter, end=" ")
   # Prompt user for input
-  letterGuessed = input("\nGuess a letter: ")
+  letterGuessed = input("\nPlease guess a letter: ")
   # User is right
   if (randomWord[guess_index] == letterGuessed):
     print_hangman(attempts_wrong)
@@ -114,4 +114,13 @@ while (attempts_wrong != 6 and letters_correct != length_guess_word):
     letters_correct = printWord(letters_already_guessed)
     printLines()
            
-print("Game over! Thanks for playing :)")
+# print("Game over! Thanks for playing :)")
+
+
+continue_playing = input("\nWould you like to play again? (y/n) ")
+if (continue_playing == 'y'):
+    randomWord = random.choice(word_list)
+elif (continue_playing == 'n'):
+    print("Thanks for playing :)")
+while continue_playing != 'y' and 'n':
+    print()
