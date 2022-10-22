@@ -1,13 +1,14 @@
 import random
+import time
 from words import word_list
 
-print("\033[1;32;40mI know your're dying to play this game.")
-print("\033[1;31;40mSo get in the swing and give it a try!")
-print("\033[1;34;40mDon't hang around. Can you guess the secret word?")
-print("\033[1;32;40mOr are you in for the bad noose! The neck's game awaits you.")
-print("\033[1;31;40mDidn't you know, I got roped into this?!") 
+print("\033[1;34;40mI know you're \033[1;31;40mdying \033[1;34;40mto play this game.")
+print("\033[1;34;40mSo get in the \033[1;32;40mswing \033[1;34;40mand give it a try!")
+print("\033[1;34;40mDon't \033[1;31;40mhang \033[1;34;40maround. Can you guess the secret word?")
+print("\033[1;34;40mOr are you in for the bad \033[1;31;40mnoose! \033[1;34;40mThe \033[1;32;40mneck's \033[1;34;40mgame awaits you.")
+print("\033[1;34;40mDidn't you know, I got \033[1;32;40mroped \033[1;34;40minto this?!") 
 print("\r")
-print("\033[1;33;40mLet's play hangman!")
+print("\033[1;32;40mLet's play hangman!")
 print("\r")
 
 # Choose a secret word
@@ -102,6 +103,7 @@ while (attempts_wrong != 6 and letters_correct != length_guess_word):
   # Prompt user for input
   letterGuessed = input("\nPlease guess a letter: ")
   print("\r")
+  time.sleep(0.5)
   # User is right
   if (randomWord[guess_index] == letterGuessed):
     print_hangman(attempts_wrong)
