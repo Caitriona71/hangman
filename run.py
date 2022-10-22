@@ -85,9 +85,9 @@ length_guess_word = len(randomWord)
 attempts_wrong = 0
 guess_index = 0
 letters_already_guessed = []
-current_letters_right = 0
+letters_correct = 0
 
-while (attempts_wrong != 6 and current_letters_right != length_guess_word):
+while (attempts_wrong != 6 and letters_correct != length_guess_word):
   print("\nLetters guessed so far: ")
   for letter in letters_already_guessed:
     print(letter, end=" ")
@@ -99,7 +99,7 @@ while (attempts_wrong != 6 and current_letters_right != length_guess_word):
     # Print word
     guess_index += 1
     letters_already_guessed.append(letterGuessed)
-    current_letters_right = printWord(letters_already_guessed)
+    letters_correct = printWord(letters_already_guessed)
     printLines()
   # User was wrong
   else:
@@ -108,7 +108,7 @@ while (attempts_wrong != 6 and current_letters_right != length_guess_word):
     # Update the drawing
     print_hangman(attempts_wrong)
     # Print word
-    current_letters_right = printWord(letters_already_guessed)
+    letters_correct = printWord(letters_already_guessed)
     printLines()
            
 print("Game over! Thanks for playing :)")
