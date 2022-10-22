@@ -83,7 +83,7 @@ def printLines():
 
 length_guess_word = len(secretWord)
 attempts_wrong = 0
-current_guess_index = 0
+guess_index = 0
 current_letters_guessed = []
 current_letters_right = 0
 
@@ -94,10 +94,10 @@ while (attempts_wrong != 6 and current_letters_right != length_guess_word):
   # Prompt user for input
   letterGuessed = input("\nGuess a letter: ")
   # User is right
-  if (secretWord[current_guess_index] == letterGuessed):
+  if (secretWord[guess_index] == letterGuessed):
     print_hangman(attempts_wrong)
     # Print word
-    current_guess_index += 1
+    guess_index += 1
     current_letters_guessed.append(letterGuessed)
     current_letters_right = printWord(current_letters_guessed)
     printLines()
