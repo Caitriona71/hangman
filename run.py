@@ -2,19 +2,19 @@ import random
 import time
 # pip install pyfiglet
 from pyfiglet import Figlet
-from words import word_list                               
+from words import word_list
 
 print("\033[1;34;40mI know you're \033[1;31;40mdying")
 print("\033[1;34;40mto play this game.")
 print("\033[1;34;40mSo get in the \033[1;32;40mswing")
-print("\033[1;34;40mand give it a try!")
+print("\033[1;34;40mand \033[1;31;40mgibbet \033[1;34;40ma try!")
 print("Can you guess the secret word?")
-print("\033[1;34;40mOr are you in for bad \033[1;31;40mnoose!")
-print("\033[1;34;40mDon't \033[1;32;40mhang \033[1;34;40maround.")
-print("\033[1;34;40mThe \033[1;31;40mneck's \033[1;34;40mgame awaits you!")
-print("\033[1;34;40mSorry you got \033[1;32;40mroped \033[1;34;40minto this?!") 
+print("\033[1;34;40mOr are you in for bad \033[1;32;40mnoose!")
+print("\033[1;34;40mDon't \033[1;31;40mhang \033[1;34;40maround.")
+print("\033[1;34;40mThe \033[1;32;40mneck's \033[1;34;40mgame awaits you!")
+print("\033[1;34;40mSorry you got \033[1;31;40mroped \033[1;34;40minto this?!")
 print("\r")
-f = Figlet (font='doom')
+f = Figlet(font='doom')
 print(f.renderText('Hangman'))
 print("\r")
 print("\033[1;32;40mLet's play!")
@@ -110,7 +110,7 @@ while (attempts_wrong != 6 and letters_correct != length_guess_word):
   for letter in letters_already_guessed:
     print(letter, end=" ")
   # Prompt user for input
-  letterGuessed = input("\nPlease guess a letter: ")
+  letterGuessed = input("\nPlease guess a letter:\n")
   print("\r")
   time.sleep(0.5)
   # User is right
@@ -134,7 +134,7 @@ while (attempts_wrong != 6 and letters_correct != length_guess_word):
 # print("Game over! Thanks for playing :)")
 
 
-continue_playing = input("\nWould you like to play again? (y/n) ")
+continue_playing = input("\nWould you like to play again? (y/n)\n")
 if (continue_playing == 'y'):
     randomWord = random.choice(word_list)
 elif (continue_playing == 'n'):
