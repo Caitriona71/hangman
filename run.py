@@ -27,50 +27,51 @@ for x in randomWord:
     print("_", end=" ")
 
 
+# This function prints the hangman image when the user makes a wrong attempt
 def print_hangman(wrong):
-    if (wrong == 0):
+    if wrong == 0:
         print("\n+---+")
         print("    |")
         print("    |")
         print("    |")
         print("    |")
         print("=======\n\n")
-    elif (wrong == 1):
+    elif wrong == 1:
         print("\n+---+")
         print("O   |")
         print("    |")
         print("    |")
         print("    |")
         print("=======\n\n")
-    elif (wrong == 2):
+    elif wrong == 2:
         print("\n+---+")
         print("O   |")
         print("|   |")
         print("    |")
         print("    |")
         print("=======\n\n")
-    elif (wrong == 3):
+    elif wrong == 3:
         print("\n+---+")
         print(" O  |")
         print("/|  |")
         print("    |")
         print("    |")
         print("=======\n\n")
-    elif (wrong == 4):
+    elif wrong == 4:
         print("\n+---+")
         print(" O  |")
         print("/|\ |")
         print("    |")
         print("    |")
         print("=======\n\n")
-    elif (wrong == 5):
+    elif wrong == 5:
         print("\n+---+")
         print(" O  |")
         print("/|\ |")
         print("/   |")
         print("    |")
         print("=======\n\n")
-    elif (wrong == 6):
+    elif wrong == 6:
         print("\n+---+")
         print(" O  |")
         print("/|\ |")
@@ -79,11 +80,12 @@ def print_hangman(wrong):
         print("=======\n\n")
 
 
+# This function prints the correct letter guessed over the dash where it belongs in the random word
 def printWord(guessedLetters):
     counter = 0
     correctLetters = 0
     for char in randomWord:
-        if (char in guessedLetters):
+        if char in guessedLetters:
             print(randomWord[counter], end=" ")
             correctLetters += 1
         else:
@@ -92,6 +94,7 @@ def printWord(guessedLetters):
     return correctLetters
 
 
+# This prints the dashes for the letters of the secret word
 def printLines():
     print("\r")
     for char in randomWord:
@@ -105,6 +108,7 @@ guess_index = 0
 letters_already_guessed = []
 letters_correct = 0
 
+# This prints the letters the user guessed so far
 while (attempts_wrong != 6 and letters_correct != length_guess_word):
     print("\nLetters already guessed: ")
     print("\r")
