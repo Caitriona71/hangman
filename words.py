@@ -139,7 +139,7 @@ word_list = [
     'seduce',
     'cell',
     'luck',
-    'inves',
+    'invest',
     'nominate',
     'parent',
     'delicacy',
