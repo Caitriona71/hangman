@@ -19,7 +19,7 @@ This is the live site: **[https://hangmancb.herokuapp.com/](https:https://caitri
 
 ## Features
 
-* At the top of the terminal an amusing colorful play on words introduces the game of hangman. (Display the image here)
+* At the top of the terminal an amusing colorful play on words introduces the game of hangman. (colored word play hangman.png)
 
 * ASCII font has been used to display Hangman as a banner. (Display the image here)
 
@@ -37,6 +37,8 @@ This is the live site: **[https://hangmancb.herokuapp.com/](https:https://caitri
 * There were warnings also - yellow ones referred to the slash used on the hangman image.  It was suggested these might be missing an 'r' prefix.  I ignored these as I knew they weren't related to that. Others were referring to the Hangman ascii banner. Blue errors were pylint errors and having checked on slack, the advice was that these were not concerning.
 
 * Each stage of the game was tested.  If the user enters a letter for example, the letter appends to the right list. If the letter the user guesses is wrong, the hangman appears with another attachment.
+
+* I had trouble with the colored text.  It works but screen background color not resetting.
 
 ## Deployment
 
