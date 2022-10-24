@@ -1,7 +1,7 @@
 import random
 import time
 # pip install pyfiglet
-from pyfiglet import Figlet
+# from pyfiglet import Figlet
 from words import word_list
 
 print("\033[1;34;40mI know you're \033[1;31;40mdying")
