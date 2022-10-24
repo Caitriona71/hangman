@@ -27,7 +27,7 @@ for x in randomWord:
     print("_", end=" ")
 
 
-# This function prints the hangman image when the user makes a wrong attempt
+# This function prints the hangman image when the user guesses a wrong letter.
 def print_hangman(wrong):
     if wrong == 0:
         print("\n+---+")
@@ -80,7 +80,7 @@ def print_hangman(wrong):
         print("=======\n\n")
 
 
-# This function prints the correct letter guessed over the dash where it belongs in the random word
+# This function prints the correct letter guessed in the random word
 def printWord(guessedLetters):
     counter = 0
     correctLetters = 0
@@ -133,10 +133,7 @@ while (attempts_wrong != 6 and letters_correct != length_guess_word):
         letters_correct = printWord(letters_already_guessed)
         printLines()
 
-# print("Game over! Thanks for playing :)")
-
-
-cont_playing = input("\nWould you like to play again? (y/n)\n")
+cont_playing = input("\nGame over. Would you like to play again? (y/n)\n")
 if (cont_playing == 'y'):
     randomWord = random.choice(word_list)
 elif (cont_playing == 'n'):
