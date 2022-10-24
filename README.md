@@ -2,7 +2,7 @@
 
 Hangman is an old-fashioned word guessing game. It is traditionally played with pencil and paper. This version is played on a Python terminal.
 
-This is the live site: ***[music_quiz](https://caitriona71-musicquiz-tf5qeirj9b3.ws-eu63.gitpod.io)***
+This is the live site: ***[       ](https://caitriona71-             .gitpod.io)***
 
 ## How to play Hangman
 
