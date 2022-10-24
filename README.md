@@ -15,12 +15,9 @@ This is the live site: **[https://hangmancb.herokuapp.com/]** <br><br>
 **7.** The hangman image is only displayed when the user chooses a wrong letter.<br> 
 **8.** The user has 6 attempts to guess the word.<br> 
 **9.** The game ends when the 6 attempts are used up or if the user guesses the correct word before all attempts have been used.<br>
-**10.** A message is displayed informing the user that the game is over and inviting them to play again.
+**10.** A message is displayed informing the user that the game is over and inviting them to play again.<br><br>
 
 ## **Features**
-
-### ***Lighthouse*** - The quiz was tested for performance using Lighthouse.
-<br>
 
 *  At the top of the terminal an amusing colorful play on words introduces the game of hangman.<br><br>
 ![Colored word play text](/screenshots/colored_word_play_hangman2.png)]
