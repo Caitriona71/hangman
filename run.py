@@ -13,15 +13,15 @@ hangman = '''  _    _
                      |___/                       '''
 
 
-print("\033[1;34;40mI know you're \033[1;31;40mdying")
-print("\033[1;34;40mto play this game.")
-print("\033[1;34;40mSo get in the \033[1;32;40mswing")
-print("\033[1;34;40mand \033[1;31;40mgibbet \033[1;34;40ma try!")
+print("\033[1;49;40mI know you're \033[1;31;40mdying")
+print("\033[1;49;40mto play this game.")
+print("\033[1;49;40mSo get in the \033[1;32;40mswing")
+print("\033[1;49;40mand \033[1;31;40mgibbet \033[1;49;40ma try!")
 print("Can you guess the secret word?")
-print("\033[1;34;40mOr are you in for bad \033[1;32;40mnoose!")
-print("\033[1;34;40mDon't \033[1;31;40mhang \033[1;34;40maround.")
-print("\033[1;34;40mThe \033[1;32;40mneck's \033[1;34;40mgame awaits you!")
-print("\033[1;34;40mSorry you got \033[1;31;40mroped \033[1;34;40minto this?!")
+print("\033[1;49;40mOr are you in for bad \033[1;32;40mnoose!")
+print("\033[1;49;40mDon't \033[1;31;40mhang \033[1;49;40maround.")
+print("\033[1;49;40mThe \033[1;32;40mneck's \033[1;49;40mgame awaits you!")
+print("\033[1;49;40mSorry you got \033[1;31;40mroped \033[1;49;40minto this?!")
 print("\r")
 print(hangman)
 
