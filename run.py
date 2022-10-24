@@ -1,7 +1,6 @@
 import random
 import time
-# pip install pyfiglet
-# from pyfiglet import Figlet
+
 from words import word_list
 
 print("\033[1;34;40mI know you're \033[1;31;40mdying")
@@ -14,8 +13,8 @@ print("\033[1;34;40mDon't \033[1;31;40mhang \033[1;34;40maround.")
 print("\033[1;34;40mThe \033[1;32;40mneck's \033[1;34;40mgame awaits you!")
 print("\033[1;34;40mSorry you got \033[1;31;40mroped \033[1;34;40minto this?!")
 print("\r")
-#f = Figlet(font='doom')
-#print(f.renderText('Hangman'))
+
+
 print("\r")
 print("\033[1;32;40mLet's play!")
 print("\r")
