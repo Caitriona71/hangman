@@ -2,7 +2,7 @@
 
 Hangman is an old-fashioned word guessing game. It is traditionally played with pencil and paper. This version is played on a Python terminal.
 
-This is the live site: ***[       ](https://caitriona71-             .gitpod.io)***
+This is the live site: **[https://hangmancb.herokuapp.com/](https:https://caitriona71-hangman-x0fpps1qtth.ws-eu72.gitpod.io)**
 
 ## How to play Hangman
 
@@ -34,7 +34,7 @@ This is the live site: ***[       ](https://caitriona71-             .gitpod.io)
 ## Testing
 
 * As Pep8 is down, we were advised to go through the problems that appear in the terminal to validate our code.  There were problems appearing in red - mainly indentation errors or if a line was too long.  These were corrected as they came up.  
-* There were warnings also - yellow ones referred to the slash used on the hangman image.  It was suggested these might be missing an 'r' prefix.  I ignored these as I knew they weren't related to that. Blue errors were pylint errors and having checked on slack, the advice was that these were not concerning.
+* There were warnings also - yellow ones referred to the slash used on the hangman image.  It was suggested these might be missing an 'r' prefix.  I ignored these as I knew they weren't related to that. Others were referring to the Hangman ascii banner. Blue errors were pylint errors and having checked on slack, the advice was that these were not concerning.
 
 * Each stage of the game was tested.  If the user enters a letter for example, the letter appends to the right list. If the letter the user guesses is wrong, the hangman appears with another attachment.
 

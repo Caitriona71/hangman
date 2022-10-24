@@ -13,8 +13,8 @@ hangman = '''  _    _
                      |___/                       '''
 
 
-print("\033[1;34;40mI know you're\n\033[1;31;40mdying\n")
-print("\033[1;34;40mto play this game.\n")
+print("\033[1;34;40mI know you're\033[1;31;40mdying")
+print("\033[1;34;40mto play this game.")
 print("\033[1;34;40mSo get in the \033[1;32;40mswing")
 print("\033[1;34;40mand \033[1;31;40mgibbet \033[1;34;40ma try!")
 print("Can you guess the secret word?")
@@ -142,4 +142,4 @@ while (attempts_wrong != 6 and letters_correct != length_guess_word):
         letters_correct = printWord(letters_already_guessed)
         printLines()
 
-cont_playing = input("\nGame over. To play again click run program?\n")
+cont_playing = input("\nGame over. To play again click run program\n")
