@@ -11,7 +11,8 @@ This is the live site: ***[       ](https://caitriona71-             .gitpod.io)
 * On the display under the dashes for the secret word, there is a message listing all the letters the player has already guessed.
 * Every time the user guesses a letter, it is added to this list.
 * If the user guesses a wrong letter, the gallows image is displayed and an attachment is added to the hanging man. 
-* If the user guesses a letter in the secret word, it will be displayed on the dash where it appears in the word.  
+* If the user guesses a letter in the secret word, it will be displayed on the dash where it appears in the word.
+* The hangman image is only displayed when the user chooses a wrong letter.  
 * The user has 6 attempts to guess the word.  
 * The game ends when the 6 attempts are used up or if the user guesses the correct word before all attempts have been used.
 * A message is displayed informing the user that the game is over and inviting them to play again.
