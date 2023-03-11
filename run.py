@@ -29,6 +29,23 @@ print("\r")
 print("\033[1;32;40mLet's play!")
 print("\r")
 
+
+def rules():
+    print(
+        """
+        Try to guess the mystery word by guessing the missing letters.
+        The blank lines displayed represent the mystery word.
+        You have 6 lives.
+        The hangman image shows how many lives you have remaining.
+        If you guess a wrong letter you lose a life.
+        The hangman image adds another body part.
+        If you guess a correct letter it will be added to the mystery word.
+        The game is over after you've used up all your lives.
+        Or you guess the mystery word.
+        """
+    )
+
+
 # Choose a secret word
 randomWord = random.choice(word_list)
 
@@ -119,7 +136,7 @@ letters_correct = 0
 
 # This prints the letters the user guessed so far
 while (attempts_wrong != 6 and letters_correct != length_guess_word):
-    print("\nLetters already guessed: ")
+    print("\nLetters already guessed:")
     print("\r")
     for letter in letters_already_guessed:
         print(letter, end=" ")
