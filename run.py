@@ -17,7 +17,7 @@ print("\033[1;34;40mI know you're \033[1;31;40mdying")
 print("\033[1;34;40mto play this game.")
 print("\033[1;34;40mSo get in the \033[1;32;40mswing")
 print("\033[1;34;40mand \033[1;31;40mgibbet \033[1;34;40ma try!")
-print("Can you guess the secret word?")
+print("Can you guess the mystery word?")
 print("\033[1;34;40mOr are you in for bad \033[1;32;40mnoose!")
 print("\033[1;34;40mDon't \033[1;31;40mhang \033[1;34;40maround.")
 print("\033[1;34;40mThe \033[1;32;40mneck's \033[1;34;40mgame awaits you!")
@@ -26,7 +26,7 @@ print("\r")
 print(hangman)
 
 print("\r")
-print("\033[1;32;40mLet's play!")
+print("\033[1;33;40mLet's play!\033[1;32;40m")
 print("\r")
 
 
@@ -46,7 +46,7 @@ def rules():
     )
 
 
-# Choose a secret word
+# Choose a mystery word
 randomWord = random.choice(word_list)
 
 for x in randomWord:
@@ -137,10 +137,11 @@ letters_correct = 0
 # This prints the letters the user guessed so far
 while (attempts_wrong != 6 and letters_correct != length_guess_word):
     print("\nLetters already guessed:")
-    print("\r")
+    #print("\r")
     for letter in letters_already_guessed:
         print(letter, end=" ")
     # Prompt user for input
+    print("\r")
     letterGuessed = input("\nPlease guess a letter:\n")
     print("\r")
     time.sleep(0.5)
@@ -150,6 +151,7 @@ while (attempts_wrong != 6 and letters_correct != length_guess_word):
         letters_already_guessed.append(letterGuessed)
         letters_correct = printWord(letters_already_guessed)
         printLines()
+        print("\n\033[1;34;40mGood work, you guessed a correct letter!\033[1;32;40m")
     else:
         attempts_wrong += 1
         letters_already_guessed.append(letterGuessed)
@@ -158,5 +160,6 @@ while (attempts_wrong != 6 and letters_correct != length_guess_word):
         # Print word
         letters_correct = printWord(letters_already_guessed)
         printLines()
+        print("\n\033[1;31;40mThat letter isn't in the word!\033[1;32;40m")
 
-cont_playing = input("\nGame over. To play again click run program\n")
+cont_playing = input("\n\033[1;33;40mGame over! To play again click run program\n")
