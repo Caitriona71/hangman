@@ -110,8 +110,8 @@ def print_hangman(wrong):
 def printWord(guessedLetters):
     counter = 0
     correctLetters = 0
-    for char in randomWord:
-        if char in guessedLetters:
+    for letter in randomWord:
+        if letter in guessedLetters:
             print(randomWord[counter], end=" ")
             correctLetters += 1
         else:
@@ -123,7 +123,7 @@ def printWord(guessedLetters):
 # This prints the dashes for the letters of the secret word
 def printLines():
     print("\r")
-    for char in randomWord:
+    for letter in randomWord:
         print("\u203E", end=" ")
 
 
