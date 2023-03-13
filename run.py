@@ -25,21 +25,23 @@ print("\033[1;34;40mSorry you got \033[1;31;40mroped \033[1;34;40minto this?!")
 print("\r")
 print(hangman)
 
+print("\033[1;33;40mRULES:\033[1;32;40m")
+print("1. Try to guess the mystery word by guessing the missing letters.")
+print("2. The blank lines displayed represent the mystery word.")
+print("3. You have 6 lives.")
+print("4. The hangman image shows how many lives you have remaining.")
+print("5. If you guess a wrong letter you lose a life.")
+print("6. The hangman image adds another body part.")
+print("7. If you guess a correct letter it will be added to the mystery word.")
+print("8. The game is over after you've used up all your lives.")
+print("9. Or you guess the mystery word.")
+print("\r")
+
 print("\r")
 print("\033[1;33;40mLet's play!\033[1;32;40m")
 print("\r")
 
 
-def rules():
-    print("Try to guess the mystery word by guessing the missing letters.")
-    print("The blank lines displayed represent the mystery word.")
-    print("You have 6 lives.")
-    print("The hangman image shows how many lives you have remaining.")
-    print("If you guess a wrong letter you lose a life.")
-    print("The hangman image adds another body part.")
-    print("If you guess a correct letter it will be added to the mystery word.")
-    print("The game is over after you've used up all your lives.")
-    print("Or you guess the mystery word.")
         #"""
         #Try to guess the mystery word by guessing the missing letters.
         #The blank lines displayed represent the mystery word.
