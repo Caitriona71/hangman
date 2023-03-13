@@ -1,8 +1,14 @@
 import random
 import time
+from colorama import init
+from colorama import Fore
 
 from words import word_list
 
+init()
+init(autoreset=True)
+
+print(Fore)
 hangman = '''  _    _                                         
  | |  | |                                        
  | |__| | __ _ _ __   __ _ _ __ ___   __ _ _ __  
@@ -110,8 +116,8 @@ def print_hangman(wrong):
 def printWord(guessedLetters):
     counter = 0
     correctLetters = 0
-    for letter in randomWord:
-        if letter in guessedLetters:
+    for char in randomWord:
+        if char in guessedLetters:
             print(randomWord[counter], end=" ")
             correctLetters += 1
         else:
@@ -123,7 +129,7 @@ def printWord(guessedLetters):
 # This prints the dashes for the letters of the secret word
 def printLines():
     print("\r")
-    for letter in randomWord:
+    for char in randomWord:
         print("\u203E", end=" ")
 
 
@@ -137,21 +143,28 @@ letters_correct = 0
 # This prints the letters the user guessed so far
 while (attempts_wrong != 6 and letters_correct != length_guess_word):
     print("\nLetters already guessed:")
-    #print("\r")
+    # print("\r")
     for letter in letters_already_guessed:
         print(letter, end=" ")
+        # print("\r")
+
     # Prompt user for input
+    # is_valid = False
+    # while (is_valid == False):
     print("\r")
     letterGuessed = input("\nPlease guess a letter:\n")
+       # if (len(letterGuessed) == 1):
+           # is_valid == True
     print("\r")
     time.sleep(0.5)
+
     if letterGuessed in splitWord:
         splitWord = list(filter(lambda x: x != letterGuessed, splitWord))
         guess_index += 1
         letters_already_guessed.append(letterGuessed)
         letters_correct = printWord(letters_already_guessed)
         printLines()
-        print("\n\033[1;34;40mGood work, you guessed a correct letter!\033[1;32;40m")
+        print("\n\033[1;34;40mGood work, you guessed right!\033[1;32;40m")
     else:
         attempts_wrong += 1
         letters_already_guessed.append(letterGuessed)
