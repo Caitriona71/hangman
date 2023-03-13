@@ -24,38 +24,25 @@ print("\033[1;34;40mThe \033[1;32;40mneck's \033[1;34;40mgame awaits you!")
 print("\033[1;34;40mSorry you got \033[1;31;40mroped \033[1;34;40minto this?!")
 print("\r")
 print(hangman)
+print("\r")
+print("\r")
 
-print("\033[1;33;40mRULES:\033[1;32;40m")
-print("1. Try to guess the mystery word by guessing the missing letters.")
-print("2. The blank lines displayed represent the mystery word.")
-print("3. You have 6 lives.")
-print("4. The hangman image shows how many lives you have remaining.")
-print("5. If you guess a wrong letter you lose a life.")
-print("6. The hangman image adds another body part.")
-print("7. If you guess a correct letter it will be added to the mystery word.")
-print("8. The game is over after you've used up all your lives.")
-print("9. Or you guess the mystery word.")
+
+print("\033[1;33;40mRULES:\033[1;34;40m")
+print("\033[1;33;40m1. \033[1;34;40mTry to guess the mystery word by guessing the missing letters.")
+print("\033[1;33;40m2. \033[1;34;40mThe blank lines displayed represent the mystery word.")
+print("\033[1;33;40m3. \033[1;34;40mYou have 6 lives.")
+print("\033[1;33;40m4. \033[1;34;40mThe hangman image shows how many lives you have remaining.")
+print("\033[1;33;40m5. \033[1;34;40mIf you guess a wrong letter you lose a life.")
+print("\033[1;33;40m6. \033[1;34;40mThe hangman image adds another body part.")
+print("\033[1;33;40m7. \033[1;34;40mIf you guess a correct letter it will be added to the mystery word.")
+print("\033[1;33;40m8. \033[1;34;40mThe game is over after you've used up all your lives.")
+print("\033[1;33;40m9. \033[1;34;40mOr you guess the mystery word.")
 print("\r")
 
 print("\r")
 print("\033[1;33;40mLet's play!\033[1;32;40m")
 print("\r")
-
-
-        #"""
-        #Try to guess the mystery word by guessing the missing letters.
-        #The blank lines displayed represent the mystery word.
-        #You have 6 lives.
-        #The hangman image shows how many lives you have remaining.
-        #If you guess a wrong letter you lose a life.
-        #The hangman image adds another body part.
-        #If you guess a correct letter it will be added to the mystery word.
-        #The game is over after you've used up all your lives.
-        #Or you guess the mystery word.
-        #"""
-    
-
-
 # Choose a mystery word
 randomWord = random.choice(word_list)
 
