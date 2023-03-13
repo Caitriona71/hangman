@@ -1,14 +1,8 @@
 import random
 import time
-from colorama import init
-from colorama import Fore
 
 from words import word_list
 
-init()
-init(autoreset=True)
-
-print(Fore)
 hangman = '''  _    _                                         
  | |  | |                                        
  | |__| | __ _ _ __   __ _ _ __ ___   __ _ _ __  
@@ -37,19 +31,27 @@ print("\r")
 
 
 def rules():
-    print(
-        """
-        Try to guess the mystery word by guessing the missing letters.
-        The blank lines displayed represent the mystery word.
-        You have 6 lives.
-        The hangman image shows how many lives you have remaining.
-        If you guess a wrong letter you lose a life.
-        The hangman image adds another body part.
-        If you guess a correct letter it will be added to the mystery word.
-        The game is over after you've used up all your lives.
-        Or you guess the mystery word.
-        """
-    )
+    print("Try to guess the mystery word by guessing the missing letters.")
+    print("The blank lines displayed represent the mystery word.")
+    print("You have 6 lives.")
+    print("The hangman image shows how many lives you have remaining.")
+    print("If you guess a wrong letter you lose a life.")
+    print("The hangman image adds another body part.")
+    print("If you guess a correct letter it will be added to the mystery word.")
+    print("The game is over after you've used up all your lives.")
+    print("Or you guess the mystery word.")
+        #"""
+        #Try to guess the mystery word by guessing the missing letters.
+        #The blank lines displayed represent the mystery word.
+        #You have 6 lives.
+        #The hangman image shows how many lives you have remaining.
+        #If you guess a wrong letter you lose a life.
+        #The hangman image adds another body part.
+        #If you guess a correct letter it will be added to the mystery word.
+        #The game is over after you've used up all your lives.
+        #Or you guess the mystery word.
+        #"""
+    
 
 
 # Choose a mystery word
