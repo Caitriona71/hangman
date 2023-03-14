@@ -1,5 +1,9 @@
 import random
 import time
+from colorama import just_fix_windows_console
+from colorama import Fore, Style
+
+just_fix_windows_console()
 
 from words import word_list
 
@@ -12,36 +16,35 @@ hangman = '''  _    _
                       __/ |                      
                      |___/                       '''
 
-
-print("\033[1;34;40mI know you're \033[1;31;40mdying")
-print("\033[1;34;40mto play this game.")
-print("\033[1;34;40mSo get in the \033[1;32;40mswing")
-print("\033[1;34;40mand \033[1;31;40mgibbet \033[1;34;40ma try!")
-print("Can you guess the mystery word?")
-print("\033[1;34;40mOr are you in for bad \033[1;32;40mnoose!")
-print("\033[1;34;40mDon't \033[1;31;40mhang \033[1;34;40maround.")
-print("\033[1;34;40mThe \033[1;32;40mneck's \033[1;34;40mgame awaits you!")
-print("\033[1;34;40mSorry you got \033[1;31;40mroped \033[1;34;40minto this?!")
+print(Style.BRIGHT + Fore.BLUE + "I know you're " + Style.BRIGHT + Fore.RED + "dying")
+print(Style.BRIGHT + Fore.BLUE + "to play this game.")
+print(Style.BRIGHT + Fore.BLUE + "So get in the " + Style.BRIGHT + Fore.GREEN + "swing")
+print(Style.BRIGHT + Fore.BLUE + "and " + Style.BRIGHT + Fore.RED + "gibbet " + Style.BRIGHT + Fore.BLUE + "a try!")
+print(Style.BRIGHT + Fore.BLUE + "Can you guess the mystery word?")
+print(Style.BRIGHT + Fore.BLUE + "Or are you in for bad " + Style.BRIGHT + Fore.GREEN + "noose!")
+print(Style.BRIGHT + Fore.BLUE + "Don't " + Style.BRIGHT + Fore.RED + "hang " + Style.BRIGHT + Fore.BLUE + "around.")
+print(Style.BRIGHT + Fore.BLUE + "The " + Style.BRIGHT + Fore.GREEN + "neck's " + Style.BRIGHT + Fore.BLUE + "game awaits you!")
+print(Style.BRIGHT + Fore.BLUE + "Sorry you got " + Style.BRIGHT + Fore.RED + "roped " + Style.BRIGHT + Fore.BLUE + "into this?!")
 print("\r")
 print(hangman)
 print("\r")
 print("\r")
 
 
-print("\033[1;33;40mRULES:\033[1;34;40m")
-print("\033[1;33;40m1. \033[1;34;40mTry to guess the mystery word by guessing the missing letters.")
-print("\033[1;33;40m2. \033[1;34;40mThe blank lines displayed represent the mystery word.")
-print("\033[1;33;40m3. \033[1;34;40mYou have 6 lives.")
-print("\033[1;33;40m4. \033[1;34;40mThe hangman image shows how many lives you have remaining.")
-print("\033[1;33;40m5. \033[1;34;40mIf you guess a wrong letter you lose a life.")
-print("\033[1;33;40m6. \033[1;34;40mThe hangman image adds another body part.")
-print("\033[1;33;40m7. \033[1;34;40mIf you guess a correct letter it will be added to the mystery word.")
-print("\033[1;33;40m8. \033[1;34;40mThe game is over after you've used up all your lives.")
-print("\033[1;33;40m9. \033[1;34;40mOr you guess the mystery word.")
+print(Style.BRIGHT + Fore.YELLOW + "RULES:")
+print(Style.BRIGHT + Fore.YELLOW + "1. " + Style.BRIGHT + Fore.BLUE + "Try to guess the mystery word by guessing the missing letters.")
+print(Style.BRIGHT + Fore.YELLOW + "2. " + Style.BRIGHT + Fore.BLUE + "The blank lines displayed represent the mystery word.")
+print(Style.BRIGHT + Fore.YELLOW + "3. " + Style.BRIGHT + Fore.BLUE + "You have 6 lives.")
+print(Style.BRIGHT + Fore.YELLOW + "4. " + Style.BRIGHT + Fore.BLUE + "The hangman image shows how many lives you have remaining.")
+print(Style.BRIGHT + Fore.YELLOW + "5. " + Style.BRIGHT + Fore.BLUE + "If you guess a wrong letter you lose a life.")
+print(Style.BRIGHT + Fore.YELLOW + "6. " + Style.BRIGHT + Fore.BLUE + "The hangman image adds another body part.")
+print(Style.BRIGHT + Fore.YELLOW + "7. " + Style.BRIGHT + Fore.BLUE + "If you guess a correct letter it will be added to the mystery word.")
+print(Style.BRIGHT + Fore.YELLOW + "8. " + Style.BRIGHT + Fore.BLUE + "The game is over after you've used up all your lives.")
+print(Style.BRIGHT + Fore.YELLOW + "9. " + Style.BRIGHT + Fore.BLUE + "Or you guess the mystery word.")
 print("\r")
 
 print("\r")
-print("\033[1;33;40mLet's play!\033[1;32;40m")
+print(Style.BRIGHT + Fore.YELLOW + "Let's play")
 print("\r")
 # Choose a mystery word
 randomWord = random.choice(word_list)
@@ -133,7 +136,7 @@ letters_correct = 0
 
 # This prints the letters the user guessed so far
 while (attempts_wrong != 6 and letters_correct != length_guess_word):
-    print("\nLetters already guessed:")
+    print(Style.BRIGHT + Fore.GREEN + "\nLetters already guessed:")
     # print("\r")
     for letter in letters_already_guessed:
         print(letter, end=" ")
@@ -143,7 +146,7 @@ while (attempts_wrong != 6 and letters_correct != length_guess_word):
     # is_valid = False
     # while (is_valid == False):
     print("\r")
-    letterGuessed = input("\nPlease guess a letter:\n")
+    letterGuessed = input(Style.BRIGHT + Fore.GREEN + "\nPlease guess a letter:\n")
        # if (len(letterGuessed) == 1):
            # is_valid == True
     print("\r")
@@ -155,7 +158,7 @@ while (attempts_wrong != 6 and letters_correct != length_guess_word):
         letters_already_guessed.append(letterGuessed)
         letters_correct = printWord(letters_already_guessed)
         printLines()
-        print("\n\033[1;34;40mGood work, you guessed right!\033[1;32;40m")
+        print(Style.BRIGHT + Fore.BLUE + "\nGood work, you guessed right!")
     else:
         attempts_wrong += 1
         letters_already_guessed.append(letterGuessed)
@@ -164,6 +167,6 @@ while (attempts_wrong != 6 and letters_correct != length_guess_word):
         # Print word
         letters_correct = printWord(letters_already_guessed)
         printLines()
-        print("\n\033[1;31;40mThat letter isn't in the word!\033[1;32;40m")
+        print(Style.BRIGHT + Fore.RED + "\nThat letter isn't in the word!")
 
-cont_playing = input("\n\033[1;33;40mGame over! To play again click run program\n")
+cont_playing = input(Style.BRIGHT + Fore.YELLOW + "\nGame over! To play again click run program\n")
