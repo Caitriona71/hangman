@@ -1,17 +1,17 @@
 # **Hangman**
 
-Hangman is an old-fashioned word guessing game. It is traditionally played with pencil and paper. This version is played on a Python terminal.
+Hangman is a popular word guessing game. It is traditionally played with pencil and paper. This version is played on a Python terminal.
 
 This is the live site: **[https://hangmancb.herokuapp.com/]** <br><br>
 
 ## **How to play Hangman**
 
 **1.** The game appears and the user is invited to play and asked to guess a letter.<br>
-**2.** A secret word is displayed with dashes - the number of dashes represents how many letters are in the word.<br> 
-**3.** On the display under the dashes for the secret word, there is a message listing all the letters the player has already guessed.<br>
+**2.** A mystery word is displayed with dashes - the number of dashes represents how many letters are in the word.<br> 
+**3.** On the display under the dashes for the mystery word, there is a message listing all the letters the player has already guessed.<br>
 **4.**  Every time the user guesses a letter, it is added to this list.<br>
 **5.** If the user guesses a wrong letter, the gallows image is displayed and an attachment is added to the hanging man.<br> 
-**6.** If the user guesses a letter in the secret word, it will be displayed on the dash where it appears in the word.<br>
+**6.** If the user guesses a letter in the mystery word, it will be displayed on the dash where it appears in the word.<br>
 **7.** The hangman image is only displayed when the user chooses a wrong letter.<br> 
 **8.** The user has 6 attempts to guess the word.<br> 
 **9.** The game ends when the 6 attempts are used up or if the user guesses the correct word before all attempts have been used.<br>
@@ -51,7 +51,7 @@ This is the live site: **[https://hangmancb.herokuapp.com/]** <br><br>
 
 ## **Testing**
 
-* As Pep8 is down, we were advised to go through the problems that appear in the terminal to validate our code.  There were problems appearing in red - mainly indentation errors or if a line was too long.  These were corrected as they came up.
+* Pep8CI was used to validate the code.  There were problems appearing in red - mainly indentation errors or if a line was too long.  These were corrected as they came up.
 
 * There were warnings also - yellow ones referred to the slash used on the hangman image.  It was suggested these might be missing an 'r' prefix.  I ignored these as I knew they weren't related to that. Others were referring to the Hangman ascii banner. Blue errors were pylint errors and having checked on slack, the advice was that these were not concerning.<br><br>
 ![Terminal errors](screenshots/problems.png)<br>
