@@ -9,36 +9,41 @@ This is the live site: **[https://hangmancb.herokuapp.com/]** <br><br>
 **1.** The game appears and the user is invited to play and asked to guess a letter.<br>
 **2.** A mystery word is displayed with dashes - the number of dashes represents how many letters are in the word.<br> 
 **3.** On the display under the dashes for the mystery word, there is a message listing all the letters the player has already guessed.<br>
-**4.**  Every time the user guesses a letter, it is added to this list.<br>
-**5.** If the user guesses a wrong letter, the gallows image is displayed and an attachment is added to the hanging man.<br> 
-**6.** If the user guesses a letter in the mystery word, it will be displayed on the dash where it appears in the word.<br>
-**7.** The hangman image is only displayed when the user chooses a wrong letter.<br> 
-**8.** The user has 6 attempts to guess the word.<br> 
-**9.** The game ends when the 6 attempts are used up or if the user guesses the correct word before all attempts have been used.<br>
-**10.** A message is displayed informing the user that the game is over and inviting them to play again.<br><br>
+**4.**  Every time the user guesses a correct letter, it is added to this list and it will be displayed on the dash where it appears in the word.<br>
+**5.** If the user guesses a wrong letter, they get feedback informing them the letter isn't in the word and another body part is added to the hanging man in the gallows image.<br> 
+**6.** The hangman image is only displayed when the user chooses a wrong letter.<br> 
+**7.** The user has 6 attempts to guess the word.<br> 
+**8.** The game ends when the 6 attempts are used up or if the user guesses the correct word before all attempts have been used.<br>
+**9.** A message is displayed informing the user that the game is over and inviting them to play again.<br><br>
 
 ## **Features**
 
 *  At the top of the terminal an amusing colorful play on words introduces the game of hangman.<br><br>
-![Colored word play text](/screenshots/colored_word_play_hangman2.png)]
+![Colored word play text](/screenshots/hangman_play_on_words.png)
 
 * ASCII font has been used to display Hangman as a banner.<br><br>
-![Ascii Banner](/screenshots/hangman_ascii_banner.png)<br><br>
+![Ascii Banner](/screenshots/hangman_ascii.png)<br><br>
+
+* The rules are displayed underneath the hangman banner.<br><br>
+![Rules](/screenshots/hangman_rules.png)
 
 * The game begins with an invitation to the user to play the game. Blank dashes display the secret word to be guessed.<br><br>
-![Invitation to play](/screenshots/invitation_to_play.png) 
+![Invitation to play](/screenshots/let's-play-hangman.png) 
 
 * Underneath the dashes a message is displayed to the user listing all the letters they have guessed.<br><br>
 ![Letters already guessed](/screenshots/letters_already_guessed.png)
 
-* If an incorrect letter is chosen the gallows image appears and an attachment is displayed for each incorrect guess.<br><br>
-![Hangman image](/screenshots/hangman_wrong_answer.png)
+* If an incorrect letter is chosen the user gets feedback informing them that that letter isn't in the word and the gallows image shows another body part added to the hanging man for each incorrect guess.<br><br>
+![Hangman image](/screenshots/incorrect_letter.png)
 
-* If a correct letter is guessed it is displayed on the dash where it appears in the word.<br><br>
-![Correct letter](/screenshots/guess_a_correct_letter2.png)
+* If a correct letter is guessed it is displayed on the dash where it appears in the word and a message is shown informing the user that they guessed right.<br><br>
+![Correct letter](/screenshots/letter_guessed_right.png)
+
+* If a letter is guessed twice in error the user gets a feedback message telling them that they have already guessed that letter.<br><br>
+![Same letter guessed twice](/screenshots/same_letter_guessed_twice.png)
 
 * When all attempts are used up the game is over and the user is asked if they would like to play again.<br><br>
-![Game over](/screenshots/game_over_message.png)<br><br>
+![Game over](/screenshots/hangman_game_over.png)<br><br>
 
 
 ## **Technologies Used**
@@ -53,13 +58,10 @@ This is the live site: **[https://hangmancb.herokuapp.com/]** <br><br>
 
 * Pep8CI was used to validate the code.  There were problems appearing in red - mainly indentation errors or if a line was too long.  These were corrected as they came up.
 
-* There were warnings also - yellow ones referred to the slash used on the hangman image.  It was suggested these might be missing an 'r' prefix.  I ignored these as I knew they weren't related to that. Others were referring to the Hangman ascii banner. Blue errors were pylint errors and having checked on slack, the advice was that these were not concerning.<br><br>
-![Terminal errors](screenshots/problems.png)<br>
+* There were warnings also - "invalid escape sequence '\' referred to the slash used on the hangman image.  I ignored these. Other warnings were referring to trailing white space on a few lines of code in the Hangman ascii banner. These were unavoidable<br><br>
+![Pep8CI](screenshots/pep8CI_test.png)<br>
 
-* Each stage of the game was tested.  If the user enters a letter for example, the letter appends to the right list. If the letter the user guesses is wrong, the hangman appears with another attachment.
-
-* The colored text was problematic.  It works but screen color around where text color has been applied not resetting.<br><br>
-![Background color](screenshots/background_color.png)<br><br>
+* Each stage of the game was tested.  If the user enters a letter for example, the letter appends to the right list. If the letter the user guesses is wrong, the hangman appears with another attachment.<br><br>
 
 ## **Deployment**
 
@@ -75,7 +77,7 @@ This is the live site: **[https://hangmancb.herokuapp.com/]** <br><br>
 
 * Youtube tutorial - Sean Halverson - [https://www.youtube.com/watch?v=pFvSb7cb_Us&t=71s]
 * [TextKool.com](https://www.textkool.com) for ascii font at top of game.
-* [ozzmaker.com/add-colour-to-text-in-python](https://ozzmaker.com) for adding color to the text.
+* [colorama/add-colour-to-text-in-python](https://pypi.org/project/colorama/) for adding color to the text.
 * [inventwithpython.com/chapter8.html](https://inventwithpython.com) for hangman images.
 * [online-python.com](https://online-python.com) IDE to check if code was working.<br><br>
 
@@ -83,5 +85,5 @@ This is the live site: **[https://hangmancb.herokuapp.com/]** <br><br>
 
 * Tutor support at Code Institute.
 * My course Facilitator.
-* My peers on the course.
+* My mentor for his guidance and support.
    

@@ -1,3 +1,4 @@
+from words import word_list
 import random
 import time
 from colorama import just_fix_windows_console
@@ -5,10 +6,9 @@ from colorama import Fore, Style
 
 just_fix_windows_console()
 
-from words import word_list
 
-hangman = '''  _    _                                         
- | |  | |                                        
+hangman = '''  _    _
+ | |  | |
  | |__| | __ _ _ __   __ _ _ __ ___   __ _ _ __  
  |  __  |/ _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
  | |  | | (_| | | | | (_| | | | | | | (_| | | | |
@@ -16,15 +16,22 @@ hangman = '''  _    _
                       __/ |                      
                      |___/                       '''
 
-print(Style.BRIGHT + Fore.BLUE + "I know you're " + Style.BRIGHT + Fore.RED + "dying")
+print(Style.BRIGHT + Fore.BLUE + "I know you're " + Style.BRIGHT
+      + Fore.RED + "dying")
 print(Style.BRIGHT + Fore.BLUE + "to play this game.")
-print(Style.BRIGHT + Fore.BLUE + "So get in the " + Style.BRIGHT + Fore.GREEN + "swing")
-print(Style.BRIGHT + Fore.BLUE + "and " + Style.BRIGHT + Fore.RED + "gibbet " + Style.BRIGHT + Fore.BLUE + "a try!")
+print(Style.BRIGHT + Fore.BLUE + "So get in the " + Style.BRIGHT
+      + Fore.GREEN + "swing")
+print(Style.BRIGHT + Fore.BLUE + "and " + Style.BRIGHT + Fore.RED + "gibbet "
+      + Style.BRIGHT + Fore.BLUE + "a try!")
 print(Style.BRIGHT + Fore.BLUE + "Can you guess the mystery word?")
-print(Style.BRIGHT + Fore.BLUE + "Or are you in for bad " + Style.BRIGHT + Fore.GREEN + "noose!")
-print(Style.BRIGHT + Fore.BLUE + "Don't " + Style.BRIGHT + Fore.RED + "hang " + Style.BRIGHT + Fore.BLUE + "around.")
-print(Style.BRIGHT + Fore.BLUE + "The " + Style.BRIGHT + Fore.GREEN + "neck's " + Style.BRIGHT + Fore.BLUE + "game awaits you!")
-print(Style.BRIGHT + Fore.BLUE + "Sorry you got " + Style.BRIGHT + Fore.RED + "roped " + Style.BRIGHT + Fore.BLUE + "into this?!")
+print(Style.BRIGHT + Fore.BLUE + "Or are you in for bad "
+      + Style.BRIGHT + Fore.GREEN + "noose!")
+print(Style.BRIGHT + Fore.BLUE + "Don't " + Style.BRIGHT + Fore.RED + "hang "
+      + Style.BRIGHT + Fore.BLUE + "around.")
+print(Style.BRIGHT + Fore.BLUE + "The " + Style.BRIGHT + Fore.GREEN + "neck's "
+      + Style.BRIGHT + Fore.BLUE + "game awaits you!")
+print(Style.BRIGHT + Fore.BLUE + "Sorry you got " + Style.BRIGHT + Fore.RED +
+      "roped " + Style.BRIGHT + Fore.BLUE + "into this?!")
 print("\r")
 print(hangman)
 print("\r")
@@ -32,15 +39,24 @@ print("\r")
 
 
 print(Style.BRIGHT + Fore.YELLOW + "RULES:")
-print(Style.BRIGHT + Fore.YELLOW + "1. " + Style.BRIGHT + Fore.BLUE + "Try to guess the mystery word by guessing the missing letters.")
-print(Style.BRIGHT + Fore.YELLOW + "2. " + Style.BRIGHT + Fore.BLUE + "The blank lines displayed represent the mystery word.")
-print(Style.BRIGHT + Fore.YELLOW + "3. " + Style.BRIGHT + Fore.BLUE + "You have 6 lives.")
-print(Style.BRIGHT + Fore.YELLOW + "4. " + Style.BRIGHT + Fore.BLUE + "The hangman image shows how many lives you have remaining.")
-print(Style.BRIGHT + Fore.YELLOW + "5. " + Style.BRIGHT + Fore.BLUE + "If you guess a wrong letter you lose a life.")
-print(Style.BRIGHT + Fore.YELLOW + "6. " + Style.BRIGHT + Fore.BLUE + "The hangman image adds another body part.")
-print(Style.BRIGHT + Fore.YELLOW + "7. " + Style.BRIGHT + Fore.BLUE + "If you guess a correct letter it will be added to the mystery word.")
-print(Style.BRIGHT + Fore.YELLOW + "8. " + Style.BRIGHT + Fore.BLUE + "The game is over after you've used up all your lives.")
-print(Style.BRIGHT + Fore.YELLOW + "9. " + Style.BRIGHT + Fore.BLUE + "Or you guess the mystery word.")
+print(Style.BRIGHT + Fore.YELLOW + "1. " + Style.BRIGHT + Fore.BLUE +
+      "Try to guess the mystery word by guessing the missing letters.")
+print(Style.BRIGHT + Fore.YELLOW + "2. " + Style.BRIGHT + Fore.BLUE +
+      "The blank lines displayed represent the mystery word.")
+print(Style.BRIGHT + Fore.YELLOW + "3. " + Style.BRIGHT + Fore.BLUE +
+      "You have 6 lives.")
+print(Style.BRIGHT + Fore.YELLOW + "4. " + Style.BRIGHT + Fore.BLUE +
+      "The hangman image shows how many lives you have remaining.")
+print(Style.BRIGHT + Fore.YELLOW + "5. " + Style.BRIGHT + Fore.BLUE +
+      "If you guess a wrong letter you lose a life.")
+print(Style.BRIGHT + Fore.YELLOW + "6. " + Style.BRIGHT + Fore.BLUE +
+      "The hangman image adds another body part.")
+print(Style.BRIGHT + Fore.YELLOW + "7. " + Style.BRIGHT + Fore.BLUE +
+      "If you guess a correct letter it will be added to the mystery word.")
+print(Style.BRIGHT + Fore.YELLOW + "8. " + Style.BRIGHT + Fore.BLUE +
+      "The game is over after you've used up all your lives.")
+print(Style.BRIGHT + Fore.YELLOW + "9. " + Style.BRIGHT + Fore.BLUE +
+      "Or you guess the mystery word.")
 print("\r")
 
 print("\r")
@@ -147,13 +163,14 @@ while (attempts_wrong != 6 and letters_correct != length_guess_word):
     letterGuessed = None
 
     while True:
-        letterGuessed = input(Style.BRIGHT + Fore.GREEN + "\nPlease guess a letter:\n")
+        letterGuessed = input(Style.BRIGHT + Fore.GREEN +
+                              "\nPlease guess a letter:\n")
 
         if not letterGuessed.isalpha() or len(letterGuessed) > 1:
             continue
         else:
             break
-                
+
     print("\r")
     time.sleep(0.5)
 
@@ -175,6 +192,8 @@ while (attempts_wrong != 6 and letters_correct != length_guess_word):
             printLines()
             print(Style.BRIGHT + Fore.RED + "\nThat letter isn't in the word!")
     else:
-        print(Style.BRIGHT + Fore.WHITE + "You've already guessed that letter!")
+        print(Style.BRIGHT + Fore.WHITE +
+              "You've already guessed that letter!")
 
-cont_playing = input(Style.BRIGHT + Fore.YELLOW + "\nGame over! To play again click run program\n")
+cont_playing = input(Style.BRIGHT + Fore.YELLOW +
+                     "\nGame over! To play again click run program\n")
