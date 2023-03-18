@@ -152,27 +152,29 @@ while (attempts_wrong != 6 and letters_correct != length_guess_word):
         if not letterGuessed.isalpha() or len(letterGuessed) > 1:
             continue
         else:
-            print("You can only guess letters, plese try again \n")
             break
                 
     print("\r")
     time.sleep(0.5)
 
-    if letterGuessed in splitWord:
-        splitWord = list(filter(lambda x: x != letterGuessed, splitWord))
-        guess_index += 1
-        letters_already_guessed.append(letterGuessed)
-        letters_correct = printWord(letters_already_guessed)
-        printLines()
-        print(Style.BRIGHT + Fore.BLUE + "\nGood work, you guessed right!")
+    if letterGuessed not in letters_already_guessed:
+        if letterGuessed in splitWord:
+            splitWord = list(filter(lambda x: x != letterGuessed, splitWord))
+            guess_index += 1
+            letters_already_guessed.append(letterGuessed)
+            letters_correct = printWord(letters_already_guessed)
+            printLines()
+            print(Style.BRIGHT + Fore.BLUE + "\nGood work, you guessed right!")
+        else:
+            attempts_wrong += 1
+            letters_already_guessed.append(letterGuessed)
+            # Update the drawing
+            print_hangman(attempts_wrong)
+            # Print word
+            letters_correct = printWord(letters_already_guessed)
+            printLines()
+            print(Style.BRIGHT + Fore.RED + "\nThat letter isn't in the word!")
     else:
-        attempts_wrong += 1
-        letters_already_guessed.append(letterGuessed)
-        # Update the drawing
-        print_hangman(attempts_wrong)
-        # Print word
-        letters_correct = printWord(letters_already_guessed)
-        printLines()
-        print(Style.BRIGHT + Fore.RED + "\nThat letter isn't in the word!")
+        print(Style.BRIGHT + Fore.WHITE + "You've already guessed that letter!")
 
 cont_playing = input(Style.BRIGHT + Fore.YELLOW + "\nGame over! To play again click run program\n")

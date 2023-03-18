@@ -298,5 +298,4 @@ word_list = [
     'stone',
     'heart',
     'grasp'
-
 ]
