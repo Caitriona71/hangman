@@ -134,7 +134,7 @@ guess_index = 0
 letters_already_guessed = []
 letters_correct = 0
 
-# This prints the letters the user guessed so far
+# # This prints the letters the user guessed so far
 while (attempts_wrong != 6 and letters_correct != length_guess_word):
     print(Style.BRIGHT + Fore.GREEN + "\nLetters already guessed:")
     # print("\r")
@@ -142,13 +142,19 @@ while (attempts_wrong != 6 and letters_correct != length_guess_word):
         print(letter, end=" ")
         # print("\r")
 
-    # Prompt user for input
-    # is_valid = False
-    # while (is_valid == False):
     print("\r")
-    letterGuessed = input(Style.BRIGHT + Fore.GREEN + "\nPlease guess a letter:\n")
-       # if (len(letterGuessed) == 1):
-           # is_valid == True
+
+    letterGuessed = None
+
+    while True:
+        letterGuessed = input(Style.BRIGHT + Fore.GREEN + "\nPlease guess a letter:\n")
+
+        if not letterGuessed.isalpha() or len(letterGuessed) > 1:
+            continue
+        else:
+            print("You can only guess letters, plese try again \n")
+            break
+                
     print("\r")
     time.sleep(0.5)
 
