@@ -34,7 +34,7 @@ This is the live site: **[https://hangmancb.herokuapp.com/]** <br><br>
 ![Letters already guessed](/screenshots/letters_already_guessed.png)
 
 * If an incorrect letter is chosen the user gets feedback informing them that that letter isn't in the word and the gallows image shows another body part added to the hanging man for each incorrect guess.<br><br>
-![Hangman image](/screenshots/incorrect_letter.png)
+![Hangman image](/screenshots/wrong_letter.png)
 
 * If a correct letter is guessed it is displayed on the dash where it appears in the word and a message is shown informing the user that they guessed right.<br><br>
 ![Correct letter](/screenshots/letter_guessed_right.png)
